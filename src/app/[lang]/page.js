@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "../../../i18n";
 import Welcome from "@/components/Welcome";
 import ServiceSelection from "@/components/serviceSection";
+import Header from "@/components/common/Header";
 
 export default function HomePage({ params }) {
   const { lang } = params;
@@ -16,12 +17,12 @@ export default function HomePage({ params }) {
 
   return (
     <>
-      <Welcome />
+      {/* <Welcome /> */}
       <div className="h-screen flex flex-col lg:flex-row">
-        <div className="lg:w-[25%] h-[25%] lg:h-full bg-blue-200">
+        <div className="lg:w-[30%] h-[30%] lg:h-full bg-blue-200">
           <ServiceSelection />
         </div>
-        <div className="lg:w-[75%] h-[75%] lg:h-full bg-green-200">Part 2</div>
+        <div className="lg:w-[70%] h-[70%] lg:h-full bg-green-200">Part 2</div>
       </div>
     </>
   );
