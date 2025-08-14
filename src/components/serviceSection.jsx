@@ -8,10 +8,9 @@ export default function ServiceSelection() {
       title: "Deep Cleaning",
       img: "/assets/Services_Images/foam-cleaning.webp",
     },
-    { title: "Repair", img: "/assets/Services_Images/repair.webp" },
     {
-      title: "Install & Uninstall",
-      img: "/assets/Services_Images/install-uninstall.webp",
+      title: "maintenance or repair",
+      img: "/assets/Services_Images/repair.webp",
     },
     {
       title: "Install & Uninstall",
@@ -41,7 +40,7 @@ export default function ServiceSelection() {
   return (
     <>
       {/* Left Side (25%) */}
-      <div className="bg-white rounded-lg p-4 shadow">
+      <div className="bg-white p-4">
         <h2 className="text-lg font-semibold mb-4">Choose a Service</h2>
         <hr className="border-gray-300 mb-4" />
 

@@ -6,6 +6,7 @@ import i18n from "../../../i18n";
 import Welcome from "@/components/Welcome";
 import ServiceSelection from "@/components/serviceSection";
 import Header from "@/components/common/Header";
+import HeroSection from "@/components/HeroSection";
 
 export default function HomePage({ params }) {
   const { lang } = params;
@@ -19,10 +20,12 @@ export default function HomePage({ params }) {
     <>
       {/* <Welcome /> */}
       <div className="h-screen flex flex-col lg:flex-row">
-        <div className="lg:w-[30%] h-[30%] lg:h-full bg-blue-200">
+        <div className="lg:w-[30%] h-[30%] lg:h-full ">
           <ServiceSelection />
         </div>
-        <div className="lg:w-[70%] h-[70%] lg:h-full bg-green-200">Part 2</div>
+        <div className="lg:w-[70%] h-[70%] lg:h-full">
+          <HeroSection />
+        </div>
       </div>
     </>
   );
