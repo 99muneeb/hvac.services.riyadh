@@ -15,19 +15,19 @@ const HeroSection = () => {
       title: "Professional Cleaning Service",
       description:
         "Deep cleaning for all AC types, improving performance and air quality.",
-      img: "/assets/hero/cleaning.webp",
+      img: "/assets/hero/installion.jpg",
     },
     {
       title: "Installation & Uninstallation",
       description:
         "Expert installation and uninstallation services with guaranteed quality.",
-      img: "/assets/hero/install.webp",
+      img: "/assets/hero/installion.jpg",
     },
     {
       title: "Maintenance Contracts",
       description:
         "Weekly visits and immediate issue resolution for 1 or 2-year plans.",
-      img: "/assets/hero/maintenance.webp",
+      img: "/assets/hero/installion.jpg",
     },
   ];
 
@@ -35,8 +35,8 @@ const HeroSection = () => {
     // dots: true,
     infinite: true,
     speed: 2000,
-    // autoplay: true,
-    autoplaySpeed: 1000, // 1 second
+    autoplay: true,
+    autoplaySpeed: 10000, // 1 second
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -46,12 +46,9 @@ const HeroSection = () => {
     <div className="w-full mx-auto">
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div
-            key={index}
-            className="!flex items-center bg-white overflow-hidden"
-          >
+          <div key={index} className="!flex bg-white overflow-hidden">
             {/* Left Side Text */}
-            <div className="w-1/2 p-6 flex flex-col justify-center">
+            <div className="w-1/2 p-6 flex flex-col  items-start">
               <h2 className="text-2xl font-bold mb-4">{slide.title}</h2>
               <p className="text-gray-600">{slide.description}</p>
             </div>
@@ -61,7 +58,7 @@ const HeroSection = () => {
               <img
                 src={slide.img}
                 alt={slide.title}
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover"
               />
             </div>
           </div>

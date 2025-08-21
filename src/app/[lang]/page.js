@@ -7,6 +7,7 @@ import Welcome from "@/components/Welcome";
 import ServiceSelection from "@/components/serviceSection";
 import Header from "@/components/common/Header";
 import HeroSection from "@/components/HeroSection";
+import MainServices from "@/components/MainServices";
 
 export default function HomePage({ params }) {
   const { lang } = params;
@@ -25,6 +26,7 @@ export default function HomePage({ params }) {
         </div>
         <div className="lg:w-[70%] h-[70%] lg:h-full">
           <HeroSection />
+          <MainServices />
         </div>
       </div>
     </>
