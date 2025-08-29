@@ -21,7 +21,7 @@ export default function HomePage({ params }) {
     <>
       {/* <Welcome /> */}
       <div className="h-screen flex flex-col lg:flex-row">
-        <div className="lg:w-[30%] h-[30%] lg:h-full ">
+        <div className="lg:w-[30%] h-[30%] lg:h-full sticky top-0">
           <ServiceSelection />
         </div>
         <div className="lg:w-[70%] h-[70%] lg:h-full">

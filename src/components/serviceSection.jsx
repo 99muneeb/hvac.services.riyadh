@@ -17,7 +17,15 @@ export default function ServiceSelection() {
       img: "/assets/Services_Images/install-uninstall.webp",
     },
     {
-      title: "Install & Uninstall",
+      title: "Water Leckage",
+      img: "/assets/Services_Images/install-uninstall.webp",
+    },
+    {
+      title: "Package Unit",
+      img: "/assets/Services_Images/install-uninstall.webp",
+    },
+    {
+      title: "Concealed Unit",
       img: "/assets/Services_Images/install-uninstall.webp",
     },
   ];
