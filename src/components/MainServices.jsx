@@ -1,7 +1,18 @@
 import React from "react";
 import UCPromiseCard from "./UCPromiseCard";
+import { useState } from "react";
+import ServiceDetailsModul from "./ServiceDetailsModul";
 
 const MainServices = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   const dpcleaning = [
     {
       title: "HVAC Deep Cleaning",
@@ -141,7 +152,7 @@ const MainServices = () => {
 
               {/* View details link */}
               <a
-                href="#"
+                onClick={handleClick}
                 className="text-purple-600 text-sm font-medium mt-3 hover:underline"
               >
                 View details
@@ -155,7 +166,10 @@ const MainServices = () => {
                 alt={service.title}
                 className="w-full h-24 object-cover rounded-lg"
               />
-              <button className="bg-purple-600 text-white text-sm px-4 py-1 rounded-md mt-3 hover:bg-purple-700">
+              <button
+                className="bg-purple-600 text-white text-sm px-4 py-1 rounded-md mt-3 hover:bg-purple-700"
+                onClick={handleClick}
+              >
                 Add
               </button>
             </div>
@@ -271,6 +285,7 @@ const MainServices = () => {
       <div className="1/4">
         <UCPromiseCard />
       </div>
+      <ServiceDetailsModul showModal={showModal} closeModal={closeModal} />
     </div>
   );
 };
