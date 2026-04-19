@@ -1,5 +1,9 @@
 // components/Header.jsx
+"use client";
+import { useTranslation } from "react-i18next";
+
 export default function Header() {
+  const { t } = useTranslation();
   return (
     <>
       {/* Left: Logo + Name */}
@@ -41,7 +45,7 @@ export default function Header() {
 
       {/* Right: Phone */}
       <div className="hidden md:flex items-center gap-2 text-sm font-medium text-gray-700">
-        📞 +966 57 803 5338
+        📞 {t("number")}
       </div>
     </>
   );

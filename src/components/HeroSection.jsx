@@ -1,32 +1,31 @@
+"use client";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const slides = [
     {
-      title: "Fast & Reliable AC Repair",
-      description:
-        "We provide 24/7 AC repair services across Riyadh with expert technicians.",
+      title: t("title1"),
+      description: t("desc1"),
       img: "/assets/hero/installion.jpg",
     },
     {
-      title: "Professional Cleaning Service",
-      description:
-        "Deep cleaning for all AC types, improving performance and air quality.",
+      title: t("title2"),
+      description: t("desc2"),
       img: "/assets/hero/installion.jpg",
     },
     {
-      title: "Installation & Uninstallation",
-      description:
-        "Expert installation and uninstallation services with guaranteed quality.",
+      title: t("title3"),
+      description: t("desc3"),
       img: "/assets/hero/installion.jpg",
     },
     {
-      title: "Maintenance Contracts",
-      description:
-        "Weekly visits and immediate issue resolution for 1 or 2-year plans.",
+      title: t("title4"),
+      description: t("desc4"),
       img: "/assets/hero/installion.jpg",
     },
   ];

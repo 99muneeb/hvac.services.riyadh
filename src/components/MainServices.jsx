@@ -2,9 +2,11 @@ import React from "react";
 import UCPromiseCard from "./UCPromiseCard";
 import { useState } from "react";
 import ServiceDetailsModul from "./ServiceDetailsModul";
+import { useTranslation } from "react-i18next";
 
 const MainServices = () => {
   const [showModal, setShowModal] = useState(false);
+  const { t } = useTranslation();
 
   const handleClick = () => {
     setShowModal(true);
@@ -15,71 +17,56 @@ const MainServices = () => {
   };
   const dpcleaning = [
     {
-      title: "HVAC Deep Cleaning",
+      title: t("mainservice_title2"),
       rating: 4.85,
       reviews: 200,
       price: "SAR100",
       duration: "2 hrs",
-      details: [
-        "Foam cleaning for all AC types",
-        "Improves cooling & air quality",
-      ],
+      details: [t("mainservice_des1"), t("mainservice_des2")],
       img: "/assets/hero/installion.jpg",
     },
   ];
   const repairing = [
     {
-      title: "Freon refill",
+      title: t("mainservice_title4"),
       rating: 4.66,
       reviews: 149,
       price: "SAR250",
       duration: "1 hr 30 mins",
-      details: [
-        "Gas leak fix and Freon recharge included",
-        "American brands Freon used",
-      ],
+      details: [t("mainservice_des3"), t("mainservice_des4")],
       img: "/assets/Services_Images/DeepCleaning.webp",
     },
     {
-      title: "Sover Freon Leckage + Freon refill + deep cleaning",
+      title: t("mainservice_title5"),
       rating: 4.85,
       reviews: 200,
       price: "SAR400",
       duration: "2 hrs",
-      details: [
-        "Foam cleaning for all AC types",
-        "Improves cooling & air quality",
-      ],
+      details: [t("mainservice_des5"), t("mainservice_des6")],
       img: "/assets/hero/installion.jpg",
     },
     {
-      title: "Check Not Cooling HVAC",
+      title: t("mainservice_title6"),
       rating: 4.85,
       reviews: 200,
       price: "SAR150",
       duration: "2 hrs",
-      details: [
-        "Foam cleaning for all AC types",
-        "Improves cooling & air quality",
-      ],
+      details: [t("mainservice_des7"), t("mainservice_des8")],
       img: "/assets/hero/installion.jpg",
     },
     {
-      title: "Freon refill + deep cleaning",
+      title: t("mainservice_title7"),
       rating: 4.85,
       reviews: 200,
       price: "SAR300",
       duration: "2 hrs",
-      details: [
-        "Foam cleaning for all AC types",
-        "Improves cooling & air quality",
-      ],
+      details: [t("mainservice_des5"), t("mainservice_des6")],
       img: "/assets/hero/installion.jpg",
     },
   ];
   const installion = [
     {
-      title: "Relocation",
+      title: t("mainservice_title9"),
       rating: 4.66,
       reviews: 149,
       price: "SAR250",
@@ -91,7 +78,7 @@ const MainServices = () => {
       img: "/assets/Services_Images/DeepCleaning.webp",
     },
     {
-      title: "Installation",
+      title: t("mainservice_title10"),
       rating: 4.66,
       reviews: 149,
       price: "SAR250",
@@ -103,7 +90,7 @@ const MainServices = () => {
       img: "/assets/Services_Images/DeepCleaning.webp",
     },
     {
-      title: "Uninstallation",
+      title: t("mainservice_title11"),
       rating: 4.85,
       reviews: 200,
       price: "SAR300",
@@ -119,7 +106,7 @@ const MainServices = () => {
   return (
     <div className="w-full py-10 flex gap-x-4">
       <div className="w-[70%] flex flex-col gap-6">
-        <h1 className=" font-bold text-2xl">Foam Deep Cleaning</h1>
+        <h1 className=" font-bold text-2xl">{t("mainservice_title1")}</h1>
         {dpcleaning.map((service, index) => (
           <div
             key={index}
@@ -175,7 +162,7 @@ const MainServices = () => {
             </div>
           </div>
         ))}
-        <h1 className=" font-bold text-2xl">HVAC Repairing</h1>
+        <h1 className=" font-bold text-2xl">{t("mainservice_title3")}</h1>
         {repairing.map((service, index) => (
           <div
             key={index}
@@ -228,7 +215,7 @@ const MainServices = () => {
             </div>
           </div>
         ))}
-        <h1 className=" font-bold text-2xl">Install & Uninstall</h1>
+        <h1 className=" font-bold text-2xl">{t("mainservice_title8")}</h1>
         {installion.map((service, index) => (
           <div
             key={index}
